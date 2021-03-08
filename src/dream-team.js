@@ -5,4 +5,4 @@ module.exports = function createDreamTeam(members) {
     return false;
   }
    return  members.filter(item => typeof item === 'string').flatMap(item => item.trim()[0].toUpperCase()).sort().join('');
-};
+}
