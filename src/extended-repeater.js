@@ -7,7 +7,7 @@ module.exports = function repeater(string, options) {
   let additionRepeatTimes = options.additionRepeatTimes === undefined ? '1' : options.additionRepeatTimes;
   let additionSeparator = options.additionSeparator === undefined ? '|' :  options.additionSeparator;
 
-  let newString = addition === '' ? '' : `${addition}${additionSeparator}`.repeat(additionRepeatTimes).slice(0, -additionSeparator.length);
+  let newString = addition !== '' ? `${addition}${additionSeparator}`.repeat(additionRepeatTimes).slice(0, -additionSeparator.length): '';
   return `${string}${newString}${separator}`.repeat(repeatTimes).slice(0, -separator.length);
 
 };
