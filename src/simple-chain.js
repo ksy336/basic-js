@@ -6,7 +6,7 @@ const chainMaker = {
    return this.chain.length;
   },
   addLink(value) {
-    value === undefined ? value ='()' : value = (`(${value})`);
+    value === undefined ? value =('()'): value = (`( ${value} )`);
       this.chain.push(value)
       return this;
 
